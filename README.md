@@ -3,6 +3,16 @@
 PunchLoader 的内容解锁模组。当前版本将 14 种未登记颜色追加到颜色仓库，并将
 7 个仓库外的最终 Boss 骨架部件变体追加到 Parts 仓库。
 
+## 构建与打包
+
+```powershell
+.\scripts\build.ps1 -PunchLoaderRoot ..\PunchLoader
+.\scripts\package.ps1 -PunchLoaderRoot ..\PunchLoader
+```
+
+构建产物写入 `build/ContentUnlocker.dll`；发布包写入
+`dist/ContentUnlocker-v<版本>.zip`。
+
 ## 当前功能
 
 - 保留原版 30 种颜色及其收集进度。

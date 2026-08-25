@@ -1,0 +1,13 @@
+build/
+dist/
+deps/
+*.dll
+*.exe
+*.pdb
+*.mdb
+__pycache__/
+*.py[cod]
+.vs/
+Thumbs.db
+.DS_Store
+
