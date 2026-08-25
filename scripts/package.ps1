@@ -33,8 +33,6 @@ Copy-Item -LiteralPath (Join-Path $root 'build\ContentUnlocker.dll') `
     -Destination (Join-Path $modStage 'ContentUnlocker.dll') -Force
 Copy-Item -LiteralPath (Join-Path $root 'mod\plugin.json') `
     -Destination (Join-Path $modStage 'plugin.json') -Force
-Copy-Item -LiteralPath (Join-Path $root 'README.md') `
-    -Destination (Join-Path $modStage 'README.md') -Force
 Compress-Archive -Path (Join-Path $stage '*') -DestinationPath $zip
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -43,8 +41,7 @@ try {
     $entries = @($archive.Entries | ForEach-Object { $_.FullName -replace '\\', '/' })
     foreach ($required in @(
         'ContentUnlocker/ContentUnlocker.dll',
-        'ContentUnlocker/plugin.json',
-        'ContentUnlocker/README.md'
+        'ContentUnlocker/plugin.json'
     )) {
         if ($entries -notcontains $required) {
             throw "Package entry missing: $required"
