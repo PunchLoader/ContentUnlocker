@@ -1,8 +1,15 @@
 {
   "id": "ContentUnlocker",
   "name": "Content Unlocker",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "author": "PunchLoader Contributors",
   "entryType": "ContentUnlockerPlugin",
-  "priority": 0
+  "priority": 0,
+  "requiresRestart": true,
+  "dependencies": [
+    {
+      "id": "PunchAPI",
+      "minVersion": "0.1.0"
+    }
+  ]
 }
